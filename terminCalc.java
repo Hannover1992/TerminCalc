@@ -97,24 +97,20 @@ public class TerminCalc{
 
 	public void init(){
 		List<Termin> DatAlg2Vorlesung  = new ArrayList<Termin>();
-		DatAlg2Vorlesung.add(new Termin("Thursday: 14:15 - 15:45, weekly (from 25/10/18), Hauptveranst., Location: (Raum F102, Gebaeude 1101: Hauptgebäude, Welfengarten 1)","Thursday",14,15,"Thursday",15,45));
-
-				System.out.println(DatAlg2Vorlesung.get(0).dniStart);
-				
-	System.exit(0);		
-		DatAlg2Vorlesung.add(new Termin("Thursday: 18:15 - 19:45, weekly (from 25/10/18), Hauptveranst., Location: (Raum F102, Gebaeude 1101: Hauptgebäude, Welfengarten 1)","Thursday",18,15,"Thursday",19,45));
+		DatAlg2Vorlesung.add(new Termin("DatAlgVor:Thursday: 14:15 - 15:45, weekly (from 25/10/18), Hauptveranst., Location: (Raum F102, Gebaeude 1101: Hauptgebäude, Welfengarten 1)","Thursday",14,15,"Thursday",15,45));
+		DatAlg2Vorlesung.add(new Termin("DatAlgVor:Thursday: 18:15 - 19:45, weekly (from 25/10/18), Hauptveranst., Location: (Raum F102, Gebaeude 1101: Hauptgebäude, Welfengarten 1)","Thursday",18,15,"Thursday",19,45));
 
 		List<Termin> DatAlgHor10 = new ArrayList<Termin>();
-//		DatAlgHor10.add(new Termin("Monday: 11:00 - 12:30, weekly (12x)"));
-//		DatAlgHor10.add(new Termin("Monday: 15:00 - 16:30, weekly (12x)"));
-//		DatAlgHor10.add(new Termin("Tuesday: 08:30 - 10:00, weekly (12x)"));
-//		DatAlgHor10.add(new Termin("Tuesday: 12:30 - 14:00, weekly (12x)"));
-//		DatAlgHor10.add(new Termin("Tuesday: 14:15 - 15:45, weekly (12x)"));
-//		DatAlgHor10.add(new Termin("Wednesday: 14:00 - 15:30, weekly(11x)"));
-//		DatAlgHor10.add(new Termin("Wednesday: 15:30 - 17:00, weekly (11x)"));
-//		DatAlgHor10.add(new Termin("Friday: 08:15 - 09:45, weekly (13x)"));
-//		DatAlgHor10.add(new Termin("Friday: 10:00 - 11:30, weekly (13x)"));
-//		DatAlgHor10.add(new Termin("Friday: 12:30 - 14:00, weekly (13x)"));
+		DatAlgHor10.add(new Termin("DatAlgHor:Monday: 11:00 - 12:30, weekly (12x)",Monday,11,00,Monday,12,30));
+		DatAlgHor10.add(new Termin("DatAlgHor:Monday: 15:00 - 16:30, weekly (12x)",Monday,15,00,Monday,16,30));
+		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 08:30 - 10:00, weekly (12x)",Tuesday,08,30,Tuesday,10,00));
+		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 12:30 - 14:00, weekly (12x)",Tuesday,12,30,Tuesday,14,00));
+		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 14:15 - 15:45, weekly (12x)",Tuesday,14,15,Tuesday,15,45));
+		DatAlgHor10.add(new Termin("DatAlgHor:Wednesday: 14:00 - 15:30, weekly(11x)",Wednesday,14,00,Wednesday,15,30));
+		DatAlgHor10.add(new Termin("DatAlgHor:Wednesday: 15:30 - 17:00, weekly (11x)",Wednesday,15,30,Wednesday,17,00));
+		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 08:15 - 09:45, weekly (13x)",Friday,08,15,Friday,09,45));
+		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 10:00 - 11:30, weekly (13x)",Friday,10,00,Friday,11,30));
+		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 12:30 - 14:00, weekly (13x)",Friday,12,30,Friday,14,00));
 
 ///				System.out.println(something.get(0).name);
 
