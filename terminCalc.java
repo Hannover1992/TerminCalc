@@ -97,8 +97,12 @@ public class TerminCalc{
 
 	public void init(){
 		List<Termin> DatAlg2Vorlesung  = new ArrayList<Termin>();
-		DatAlg2Vorlesung.add(new Termin("Thursday: 14:15 - 15:45, weekly (from 25/10/18), Hauptveranst., Location: (Raum F102, Gebaeude 1101: Hauptgebäude, Welfengarten 1)",3,14,15,3,15,45));
-		DatAlg2Vorlesung.add(new Termin("Thursday: 18:15 - 19:45, weekly (from 25/10/18), Hauptveranst., Location: (Raum F102, Gebaeude 1101: Hauptgebäude, Welfengarten 1)",3,18,15,3,19,45));
+		DatAlg2Vorlesung.add(new Termin("Thursday: 14:15 - 15:45, weekly (from 25/10/18), Hauptveranst., Location: (Raum F102, Gebaeude 1101: Hauptgebäude, Welfengarten 1)","Thursday",14,15,"Thursday",15,45));
+
+				System.out.println(DatAlg2Vorlesung.get(0).dniStart);
+				
+	System.exit(0);		
+		DatAlg2Vorlesung.add(new Termin("Thursday: 18:15 - 19:45, weekly (from 25/10/18), Hauptveranst., Location: (Raum F102, Gebaeude 1101: Hauptgebäude, Welfengarten 1)","Thursday",18,15,"Thursday",19,45));
 
 		List<Termin> DatAlgHor10 = new ArrayList<Termin>();
 //		DatAlgHor10.add(new Termin("Monday: 11:00 - 12:30, weekly (12x)"));
