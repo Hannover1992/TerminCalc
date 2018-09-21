@@ -104,39 +104,53 @@ public class TerminCalc{
 
 		//Horsaalubung
 		List<Termin> DatAlgHor10 = new ArrayList<Termin>();
-		DatAlgHor10.add(new Termin("DatAlgHor:Monday: 11:00 - 12:30, weekly (12x)",Monday,11,00,Monday,12,30));
-		DatAlgHor10.add(new Termin("DatAlgHor:Monday: 15:00 - 16:30, weekly (12x)",Monday,15,00,Monday,16,30));
-		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 08:30 - 10:00, weekly (12x)",Tuesday,08,30,Tuesday,10,00));
-		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 12:30 - 14:00, weekly (12x)",Tuesday,12,30,Tuesday,14,00));
-		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 14:15 - 15:45, weekly (12x)",Tuesday,14,15,Tuesday,15,45));
-		DatAlgHor10.add(new Termin("DatAlgHor:Wednesday: 14:00 - 15:30, weekly(11x)",Wednesday,14,00,Wednesday,15,30));
-		DatAlgHor10.add(new Termin("DatAlgHor:Wednesday: 15:30 - 17:00, weekly (11x)",Wednesday,15,30,Wednesday,17,00));
-		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 08:15 - 09:45, weekly (13x)",Friday,08,15,Friday,09,45));
-		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 10:00 - 11:30, weekly (13x)",Friday,10,00,Friday,11,30));
-		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 12:30 - 14:00, weekly (13x)",Friday,12,30,Friday,14,00));
+		DatAlgHor10.add(new Termin("DatAlgHor:Monday: 11:00 - 12:30, weekly (12x)","Monday",11,00,"Monday",12,30));
+		DatAlgHor10.add(new Termin("DatAlgHor:Monday: 15:00 - 16:30, weekly (12x)","Monday",15,00,"Monday",16,30));
+		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 08:30 - 10:00, weekly (12x)","Tuesday",8,30,"Tuesday",10,00));
+		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 12:30 - 14:00, weekly (12x)","Tuesday",12,30,"Tuesday",14,00));
+		DatAlgHor10.add(new Termin("DatAlgHor:Tuesday: 14:15 - 15:45, weekly (12x)","Tuesday",14,15,"Tuesday",15,45));
+		DatAlgHor10.add(new Termin("DatAlgHor:Wednesday: 14:00 - 15:30, weekly(11x)","Wednesday",14,00,"Wednesday",15,30));
+		DatAlgHor10.add(new Termin("DatAlgHor:Wednesday: 15:30 - 17:00, weekly (11x)","Wednesday",15,30,"Wednesday",17,00));
+		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 8:15 - 09:45, weekly (13x)","Friday",8,15,"Friday",9,45));
+		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 10:00 - 11:30, weekly (13x)","Friday",10,00,"Friday",11,30));
+		DatAlgHor10.add(new Termin("DatAlgHor:Friday: 12:30 - 14:00, weekly (13x)","Friday",12,30,"Friday",14,00));
 
 		//Grundlagen Betriebsszstheme
 		//hier muss man berucksichtigen das wenn man sie fur a endscheided soll man auch aus gruppe a horsaalubung und gruppenubung wahlen
 		List<Termin> GruBetVor1 = new ArrayList<Termin>();
-		GruBetVor1.add(new  Termin("Tuesday: 16:15 - 17:45, weekly (from 16/10/18), Hauptveranst., Location: (Raum E214: Großer Physiksaal, Gebaeude 1101: Hauptgebäude, Welfengarten 1)",Tuesday,16,15,Tuesday,17,45));
+		GruBetVor1.add(new  Termin("Tuesday: 16:15 - 17:45, weekly (from 16/10/18), Hauptveranst., Location: (Raum E214: Großer Physiksaal, Gebaeude 1101: Hauptgebäude, Welfengarten 1)","Tuesday",16,15,"Tuesday",17,45));
 
 		//Gruppenubung Betriebssystheme A
 		List<Termin> GruBetGruA10 = new ArrayList<Termin>();
-		GruBetGruA10.add(new Termin("GruBetGruA10:Monday: 08:30 - 10:00",Monday,08,30,Monday,10,00));
-		GruBetGruA10.add(new Termin("GruBetGruA10:Monday: 15:00 - 16:30",Monday,15,00,Monday,16,30));
-		GruBetGruA10.add(new Termin("GruBetGruA10:Tuesday: 10:00 - 11:30",Tuesday,10,00,Tuesday,11,30));
-		GruBetGruA10.add(new Termin("GruBetGruA10:Tuesday: 12:30 - 14:00"Tuesday,12,30,Tuesday,14,00));
-		GruBetGruA10.add(new Termin("GruBetGruA10:Tuesday: 14:15 - 15:45",Tuesday,14,15,Tuesday,15,45));
-		GruBetGruA10.add(new Termin("GruBetGruA10:Wednesday: 12:30 - 14:00",Wednesday,12,13,Wednesday,14,00);
-		GruBetGruA10.add(new Termin("GruBetGruA10:Wednesday: 16:00 - 17:30",Wednesday,16,00,Wednesday,17,30);
-		GruBetGruA10.add(new Termin("GruBetGruA10:Thursday: 12:30 - 14:00",Thursday,12,30,Thursday,14,00);
-		GruBetGruA10.add(new Termin("GruBetGruA10:Thursday: 14:15 - 15:45",Thursday,14,15,Thursday,15,45);
-		GruBetGruA10.add(new Termin("GruBetGruA10:Thursday: 16:00 - 17:30",Thursday,16,00,Thursday,17,30);
-
-
-
-
-///				System.out.println(something.get(0).name
+		GruBetGruA10.add(new Termin("GruBetGruA10:Monday: 8:30 - 10:00","Monday",8,30,"Monday",10,00));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Monday: 15:00 - 16:30","Monday",15,00,"Monday",16,30));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Tuesday: 10:00 - 11:30","Tuesday",10,00,"Tuesday",11,30));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Tuesday: 12:30 - 14:00","Tuesday",12,30,"Tuesday",14,00));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Tuesday: 14:15 - 15:45","Tuesday",14,15,"Tuesday",15,45));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Wednesday: 12:30 - 14:00","Wednesday",12,13,"Wednesday",14,00));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Wednesday: 16:00 - 17:30","Wednesday",16,00,"Wednesday",17,30));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Thursday: 12:30 - 14:00","Thursday",12,30,"Thursday",14,00));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Thursday: 14:15 - 15:45","Thursday",14,15,"Thursday",15,45));
+		GruBetGruA10.add(new Termin("GruBetGruA10:Thursday: 16:00 - 17:30","Thursday",16,00,"Thursday",17,30));
+		//Gruppenubung Betriebssystheme B
+		List<Termin> GruBetGruB11 = new ArrayList<Termin>();
+		GruBetGruB11.add(new Termin("GruBetGruB11:Monday: 8:30 - 10:00","Monday",8,30,"Monday",10,00));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Monday: 15:00 - 16:30","Monday",15,00,"Monday",16,30));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Tuesday: 10:00 - 11:30","Tuesday",10,00,"Tuesday",11,30));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Tuesday: 10:30 - 14:00","Tuesday",10,30,"Tuesday",14,00));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Tuesday: 14:15 - 15:45","Tuesday",14,15,"Tuesday",15,45));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Wednesday: 12:30 - 14:00","Wednesday",12,30,"Wednesday",14,00));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Wednesday: 16:00 - 17:30","Wednesday",16,00,"Wednesday",17,30));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Thursday: 12:30 - 14:00","Thursday",12,30,"Thursday",14,00));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Thursday: 14:15 - 15:45","Thursday",14,15,"Thursday",15,45));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Thursday: 16:00 - 17:30","Thursday",16,00,"Thursday",17,30));
+		GruBetGruB11.add(new Termin("GruBetGruB11:Friday: 10:45 - 12:15","Friday",10,45,"Friday",12,15));
+		//Grundlagen Betriebs Systheme Horsaalubung A
+		List<Termin> GruBetHorA = new ArrayList<Termin>();
+		GruBetHorA.add(new Termin("Friday: 12:30 - 14:00","Friday",12,30,"Friday",14,00));
+		//Grundlagen Betriebs Systheme Horsaalubung B
+		List<Termin> GruBetHorB = new ArrayList<Termin>();
+		GruBetHorB.add(new Termin("Friday: 12:30 - 14:00","Friday",12,30,"Friday",14,00));
 	}
 	public static void main(String[] args){
 		TerminCalc simulation = new TerminCalc(7,24,60);
