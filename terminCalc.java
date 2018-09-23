@@ -2,12 +2,15 @@ import java.util.*;
 
 public class TerminCalc{
 	int czas[][][];
+	int DNI = 7;
+	int GODZINY = 24;
+	int MINUTY = 60;	
 
-	public TerminCalc(int dni, int godziny, int minuty){
-		int[][][] temp = new int[dni][godziny][minuty];
-		for(int i = 0; i < dni; i++){
-			for(int i2 = 0; i2 <godziny ; i2++){
-				for(int i3 = 0; i3 < minuty; i3++){
+	public TerminCalc(){
+		int[][][] temp = new int[DNI][GODZINY][MINUTY];
+		for(int i = 0; i < DNI; i++){
+			for(int i2 = 0; i2 <GODZINY ; i2++){
+				for(int i3 = 0; i3 < MINUTY; i3++){
 					temp[i][i2][i3] = 0;
 				}
 			}
@@ -16,9 +19,9 @@ public class TerminCalc{
 	}
 
 	public void printCzas(){
-		int dni = 7;
-		int godziny = 24;
-		int minuty = 60;
+		int dni = DNI;
+		int godziny = GODZINY;
+		int minuty = MINUTY;
 		for(int i = 0; i < dni; i++){
 			switch(i){
 				case 0:  System.out.println("Montag:");break;
@@ -29,8 +32,28 @@ public class TerminCalc{
 				case 5:  System.out.println("Samstag:");break;
 				case 6:  System.out.println("Sontag:");break;
 			}
+			
+				System.out.print("   ");
+				for(int k = 0; k < 60;k++){
+					if((k%10) == 0){
+						if(k == 0){
+						System.out.print(0);
+						}
+						System.out.print(k);
+					} else {
+						if(((k%8) == 0) ){
+						} else {
+						System.out.print(" ");
+						}
+					}
+				}
+				System.out.println("");
 //			for(int i2 = 8; i2 <godziny - 3 ; i2++){
 			for(int i2 = 0; i2 <godziny; i2++){
+				if(i2 < 10){
+
+				System.out.print(0);
+				}
 				System.out.print(i2 + ":");
 				for(int i3 = 0; i3 < minuty; i3++){
 					System.out.print(this.czas[i][i2][i3]);
@@ -53,13 +76,13 @@ public class TerminCalc{
 
 			this.czas[startDni][startGodziny][startMinuty]++;
 			startMinuty++;
-			if(startMinuty == 60){
+			if(startMinuty == MINUTY){
 				startMinuty = 0;
 				startGodziny++;
-				if(startGodziny == 24){
+				if(startGodziny == GODZINY){
 					startGodziny = 0;
 					startDni++;
-					if(startDni == 7){
+					if(startDni == DNI){
 
 				System.out.println("Error:Dni sie skonczyly");
 				System.exit(0);
@@ -71,9 +94,9 @@ public class TerminCalc{
 
 	public int addCzas(){
 		int summe = 0;
-		for(int i = 0; i < 7;i++){
-			for(int i2 = 0; i2 < 24;i2++){
-				for(int i3 = 0; i3 < 60;i3++){
+		for(int i = 0; i < DNI;i++){
+			for(int i2 = 0; i2 < GODZINY;i2++){
+				for(int i3 = 0; i3 < MINUTY;i3++){
 					summe += this.czas[i][i2][i3];
 }
 			}
@@ -82,9 +105,9 @@ public class TerminCalc{
 	}
 	public boolean findOverlap(){
 		boolean gefunden = false;
-		for(int i = 0; i < 7;i++){
-			for(int i2 = 0; i2 < 24;i2++){
-				for(int i3 = 0; i3 < 60;i3++){
+		for(int i = 0; i < DNI;i++){
+			for(int i2 = 0; i2 < GODZINY;i2++){
+				for(int i3 = 0; i3 < MINUTY;i3++){
 	if(this.czas[i][i2][i3] >= 2){
 		gefunden = true;
 	}
@@ -96,6 +119,16 @@ public class TerminCalc{
 	}
 	public void addTermin(Termin termin){
 		this.setCzas(termin.dniStart,termin.godzinyStart,termin.minutyStart,termin.dniEnd,termin.godzinyEnd,termin.minutyEnd);
+	}
+	
+	public void cleanCalender(){
+		for(int i = 0; i < DNI;i++){
+			for(int i2 = 0; i2 < GODZINY;i2++){
+				for(int i3 = 0; i3 < MINUTY;i3++){
+					this.czas[i][i2][i3] = 0;
+				}
+			}
+		}
 	}
 	
 
@@ -185,12 +218,16 @@ public class TerminCalc{
 		SigSysVor1.add(new Termin("Monday: 15:00 - 16:30","Monday",15,00,"Monday",16,30));
 		List<Termin> SigSysHor1 = new ArrayList<Termin>();
 		SigSysHor1.add(new Termin("Friday: 08:30 - 10:00","Friday",8,30,"Friday",10,00));
+		/*
+		printf verbessert, als nechstes die for schleifen einschpeisen, eine neue liste mit terminen, wenn keine 2 speichern, wenn nicht loschen, dann calk zurucksetze, am ende die liste augeben:*/
 	}
 	public static void main(String[] args){
-		TerminCalc simulation = new TerminCalc(7,24,60);
+		TerminCalc simulation = new TerminCalc();
 		simulation.init();
 		Termin temp = new Termin("Friday: 08:30 - 10:00","Friday",8,30,"Friday",10,00);
 		simulation.addTermin(temp);
+		simulation.printCzas();
+		simulation.cleanCalender();
 		simulation.printCzas();
 		//simulation.printCzas();
 //		simulation.setCzas(6,22,0,6,23,59);
