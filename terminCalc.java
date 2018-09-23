@@ -94,6 +94,10 @@ public class TerminCalc{
 		}
 		return gefunden;
 	}
+	public void addTermin(Termin termin){
+		this.setCzas(termin.dniStart,termin.godzinyStart,termin.minutyStart,termin.dniEnd,termin.godzinyEnd,termin.minutyEnd);
+	}
+	
 
 	public void init(){
 		//Datenstrukturen und Algorithmen
@@ -151,10 +155,43 @@ public class TerminCalc{
 		//Grundlagen Betriebs Systheme Horsaalubung B
 		List<Termin> GruBetHorB = new ArrayList<Termin>();
 		GruBetHorB.add(new Termin("Friday: 12:30 - 14:00","Friday",12,30,"Friday",14,00));
+
+		//Software Technik
+		//Vorlesung
+		List<Termin> SofTechVor1 = new ArrayList<Termin>();
+		SofTechVor1.add(new Termin("Tuesday: 13:00 - 14:30","Tuesday",13,00,"Tuesday",14,30));
+		//Horsaalubung
+		List<Termin> SofTechHor2 = new ArrayList<Termin>();
+		SofTechHor2.add(new Termin("Monday: 14:45 - 16:00","Monday",14,45,"Monday",16,00));
+
+		//Numerische Mathematick
+		//Vorlesung A
+		List<Termin> NumMatV2A = new ArrayList<Termin>();
+		NumMatV2A.add(new Termin("Monday: 12:00 - 14:45","Monday",12,00,"Monday",14,45));
+		NumMatV2A.add(new Termin("Thursday: 11:45 - 13:30","Thursday",11,45,"Thursday",13,30));
+		//Vorlesung B
+		List<Termin> NumMatV2B = new ArrayList<Termin>();	
+		NumMatV2B.add(new Termin("Wednesday: 11:00 - 12:30","Wednesday",11,00,"Wednesday",12,30));
+		NumMatV2B.add(new Termin("Friday: 11:15 - 14:00","Friday",11,15,"Friday",14,00));
+		//Sprechstuden
+		List<Termin> NumMatHor5 = new ArrayList<Termin>();
+		NumMatHor5.add(new Termin("Tuesday: 10:15 - 12:00","Tuesday",10,15,"Tuesday",12,00));
+		NumMatHor5.add(new Termin("Tuesday: 13:45 - 15:30","Tuesday",13,45,"Tuesday",15,30));
+		NumMatHor5.add(new Termin("Wednesday: 10:15 - 12:00","Wednesday",10,15,"Wednesday",12,00));
+		NumMatHor5.add(new Termin("Wednesday: 12:15 - 14:00","Wednesday",12,15,"Wednesday",14,00));
+		NumMatHor5.add(new Termin("Thursday: 12:15 - 13:45","Thursday",12,15,"Thursday",13,45));
+		//Signale und Systheme
+		List<Termin> SigSysVor1 = new ArrayList<Termin>();
+		SigSysVor1.add(new Termin("Monday: 15:00 - 16:30","Monday",15,00,"Monday",16,30));
+		List<Termin> SigSysHor1 = new ArrayList<Termin>();
+		SigSysHor1.add(new Termin("Friday: 08:30 - 10:00","Friday",8,30,"Friday",10,00));
 	}
 	public static void main(String[] args){
 		TerminCalc simulation = new TerminCalc(7,24,60);
 		simulation.init();
+		Termin temp = new Termin("Friday: 08:30 - 10:00","Friday",8,30,"Friday",10,00);
+		simulation.addTermin(temp);
+		simulation.printCzas();
 		//simulation.printCzas();
 //		simulation.setCzas(6,22,0,6,23,59);
 //		simulation.printCzas();
